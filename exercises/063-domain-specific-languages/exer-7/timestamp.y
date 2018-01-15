@@ -1,7 +1,3 @@
-%require "3.0"
-
-%verbose
-
 %{
 
 #include <cstdio>
@@ -18,12 +14,10 @@ void yyerror(const char*);
 
 %union {
     char digit;
-    char two_digits[2];
 }
 
 %token AM_PM
-%token <char> DIGIT
-%token <std::array<char, 2>> TWO_DIGITS
+%token <digit> DIGIT
 
 %type <int> hours
 %type <int> minutes
@@ -33,22 +27,21 @@ void yyerror(const char*);
 
 time
     : hours[H]
-      { std::cout << "hours: " << $H << "\n"; }
       complement[C]
-      { std::cout << "complement: " << $C << "\n"; }
     ;
 
 hours
     : DIGIT
-      { $$ = int{std::stoi($1)}; }
-    | TWO_DIGITS
-      { $$ = int{std::stoi($1)}; }
+      { $$ = std::stoi($1); }
+    | DIGIT DIGIT
+      { $$ = std::stoi($1); }
     ;
 
 minutes
-    : ":" TWO_DIGITS
+    : ":" DIGIT DIGIT
     {
         std::cout << "hehehe";
+        $$ = 0;
     }
     ;
 

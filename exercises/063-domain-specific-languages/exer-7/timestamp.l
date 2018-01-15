@@ -10,7 +10,6 @@
 
 %%
 
-[0-9][0-9] { std::cout << "digits (2): " << yytext << '\n'; return TWO_DIGITS; }
 [0-9] { std::cout << "digit: " << yytext << '\n'; return DIGIT; }
 
 "am"|"pm" { return AM_PM; }
