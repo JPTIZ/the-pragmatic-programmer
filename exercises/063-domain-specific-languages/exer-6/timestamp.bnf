@@ -1,0 +1,14 @@
+time ::= hours complement
+
+hours ::= digit
+        | digit digit
+
+minutes ::= digit digit
+
+complement ::= am_pm
+             | ":" minutes
+             | ":" minutes am_pm
+
+am_pm ::= "am" | "pm"
+
+digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
