@@ -16,7 +16,7 @@ class InvalidCommand(ParseError):
 class Parser:
     def __init__(self, x=0, y=0):
         self.drawing = False
-        self.pen = 'black'
+        self.pen = Parser.PENS[0]
         self.x = x
         self.y = x
 
