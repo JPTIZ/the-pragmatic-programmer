@@ -4,7 +4,7 @@ Domain Specific Languages
 Exercises
 ---------
 
-1. We want to implement a mini-language to control a simple drawing package
+5. We want to implement a mini-language to control a simple drawing package
    (perhaps a turtle-graphics system). The language consists of single-letter
    commands. Some commands are followed by a single number. For example, the
    following input would draw a rectangle.
@@ -22,15 +22,15 @@ Exercises
    Implement the code that parses this language. It should be designed so that it
    is simple to add new commands.
 
-2. Design a BNF grammar to parse a time specification. All of the following
+6. Design a BNF grammar to parse a time specification. All of the following
    should be accepted.
 
    ```
    4pm, 7:38pm, 23:42, 3:16, 3:16am
    ```
 
-3. Implement a parser for the BNF grammar in Exercise 6 using yacc, bison, or a
+7. Implement a parser for the BNF grammar in Exercise 6 using yacc, bison, or a
    similar parser-generator.
 
-4. Implement the time parser using Perl. [Hint: Regular expressions make good
+8. Implement the time parser using Perl. [Hint: Regular expressions make good
    parsers.]
