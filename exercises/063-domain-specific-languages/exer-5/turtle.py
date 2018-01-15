@@ -14,10 +14,11 @@ class InvalidCommand(ParseError):
 
 
 class Parser:
-    drawing: bool = False
-    pen: str = 'black'
-    x: int = 0
-    y: int = 0
+    def __init__(self, x=0, y=0):
+        self.drawing = False
+        self.pen = 'black'
+        self.x = x
+        self.y = x
 
     def select_pen(self, number):
         try:
@@ -41,7 +42,7 @@ class Parser:
         self.move(int(distance), 0)
 
     def draw_south(self, distance):
-        self.move(0, int(distance))
+        self.move(0, -int(distance))
 
     def draw_west(self, distance):
         self.move(-int(distance), 0)
