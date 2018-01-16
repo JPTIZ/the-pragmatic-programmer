@@ -32,5 +32,5 @@ Exercises
 7. Implement a parser for the BNF grammar in Exercise 6 using yacc, bison, or a
    similar parser-generator.
 
-8. Implement the time parser using Perl. [Hint: Regular expressions make good
-   parsers.]
+8. Implement the time parser using ~~Perl~~ Python. [Hint: Regular expressions
+   make good parsers.]
