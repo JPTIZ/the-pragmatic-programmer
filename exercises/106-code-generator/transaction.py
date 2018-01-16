@@ -1,6 +1,5 @@
 '''Database transaction module.'''
 import re
-from typing import List
 
 from carl import command
 
@@ -86,11 +85,11 @@ def main():
 
 @main.subcommand
 def gen(input: str,
-        languages: List[str]=[]):
+        languages: str='cpp,py'):
     print(f'input file: {input}')
     with open(input) as file:
         input = file.read()
-        for lang in 'cpp', 'py':
+        for lang in languages.split(','):
             print(parse(input, lang))
 
 
