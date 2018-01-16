@@ -12,3 +12,6 @@ before reading the rest of this challenge.
 
     2. For each version, add a new, variable-length field called _directions_
        inn which you might enter directions to each person's house.
+
+What issues come up regarding verisoning and extensibility? Which form was
+easier to modify? What about converting existing data?
