@@ -1,0 +1,6 @@
+# Generated stuff
+**/*.db
+
+# Python stuff
+**/__pycache__
+**/.venv
