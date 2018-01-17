@@ -6,7 +6,7 @@ from languages import generate_cpp, generate_py, parse
 
 @command
 def main():
-    print('main')
+    pass
 
 
 @main.subcommand
